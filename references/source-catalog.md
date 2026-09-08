@@ -24,6 +24,8 @@ A job posting is a company confessing what is broken and paying to fix it. It is
 
 **Liveness traps** (all real, all common): a board that returns jobs from a company that was acquired; a slug that belongs to a different company with a similar name; a posting that has been open for 200+ days (often evergreen, not a live need); a board with zero jobs that is still a valid board. Check `updated_at` where available, and confirm the company name in the payload matches the company you think it is.
 
+**⚠ Coverage limit (tested):** medical practices, clinics, law firms, and most non-tech operators are almost never on these five ATSs — they hire through Paylocity, Workday, ADP, or a careers page. For those buyers the public APIs return nothing; use LinkedIn Jobs search, ZipRecruiter, or an Apify LinkedIn-jobs actor, and expect job-board pages to refuse automated reads (open the req by hand for the date and verbatim).
+
 **Aggregators when the company is not on an ATS API:** LinkedIn Jobs (manual or via a scraping actor), Indeed, Google Jobs (structured data on the company's careers page).
 
 **What to filter on:** the buyer's phrase for the problem (Stage 1), the role that feels the pain, and the tools they name. A req for a "denials specialist" is a situation; a req for a "marketing manager" is noise until the description mentions the pain.
